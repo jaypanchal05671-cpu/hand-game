@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+#hand {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#hand:active {
+  transform: scale(0.9);
+}
+
+/* Table look */
+#table {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 300px;
+  min-height: 120px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  position: relative;
+}
+
+/* Wheat grains */
+.grain {
+  width: 10px;
+  height: 10px;
+  background: goldenrod;
+  border-radius: 50%;
+  position: absolute;
+  animation: fall 0.8s ease forwards;
+}
+
+/* Falling animation */
+@keyframes fall {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+  100% {
+    top: var(--y);
+    left: var(--x);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+  #hand {
+    width: 120px;
+  }
+}
