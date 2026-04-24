@@ -29,9 +29,10 @@ function openHand() {
 
   setTimeout(() => {
     if (count % 2 === 0) {
-      result.innerText = "વેણ";
+    result.innerText = "વધાવો";
+     
     } else {
-      result.innerText = "વધાવો";
+       result.innerText = "વેણ";
     }
   }, 800);
 }
